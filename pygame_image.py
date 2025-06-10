@@ -7,12 +7,11 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 def main():
     pg.display.set_caption("はばたけ！こうかとん")
-    screen = pg.display.set_mode((1600, 900))
+    screen = pg.display.set_mode((800, 600))
     clock  = pg.time.Clock()
     bg_img = pg.image.load("fig/pg_bg.jpg")
     kk_img = pg.image.load("fig/3.png")
-        
-    # kk_img = pg.transform.flip(kk_img, True, False)
+    kk_img = pg.transform.flip(kk_img, True, False)
     
     
     tmr = 0
@@ -25,11 +24,6 @@ def main():
         tmr += 1        
         clock.tick(10)
 
-        screen.blit(kk_img, [0, 0])
-        # pg.transform.flip(kk_img, True, False)
-        pg.display.update()
-        tmr += 1        
-        clock.tick(10)
         
         
 
