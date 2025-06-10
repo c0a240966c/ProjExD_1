@@ -16,8 +16,9 @@ def main():
     kk_rct = kk_img.get_rect()
     kk_rct.center = 300, 200
 
-    move = 0
+    
     tmr = 0
+    move = 0
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
@@ -33,6 +34,8 @@ def main():
         else:
             move = [-1, 0]
         kk_rct.move_ip(move)
+        
+            
         x = tmr%3200
         screen.blit(bg_img, [-x, 0])
         screen.blit(bg_img2, [-x+1600,-0])
